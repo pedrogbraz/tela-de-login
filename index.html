@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .error-code {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex items-center justify-center m-10 max-[918px]:m-0 shadow-gray-300 shadow-sm rounded-xl" style="height: 565px">
+        <div class="w-1/2 max-[918px]:hidden" style="height: 100%;">
+            <img class="ml-20 mt-20" src="assets/dranws.svg" style="width: 70%; height: 70%;">
+        </div>
+        <div class="w-1/2 max-[918px]:w-full bg-blue-400 flex items-center justify-center rounded-xl" style="height: 100%;">
+            <div class="w-5/6 flex flex-col gap-4">
+                <div class="relative flex justify-center">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fa-solid fa-user min-[1920px]:ml-20 xl:ml-16 md:ml-10 max-[918px]:invisible sm:ml-8 text-blue-400"></i>
+                    </div>
+                    <input type="text" class="block xl:pl-12 md:pl-14 sm:pl-9 max-[640px]:pl-8 pr-3 py-3 border border-gray-300 rounded-full placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" style="width: 80%;" placeholder="Your name" id="name" required>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fa-solid fa-envelope min-[1920px]:ml-20 xl:ml-16 md:ml-10 max-[918px]:invisible sm:ml-8 text-blue-400"></i>
+                    </div>
+                    <input type="text" class="block xl:pl-12 md:pl-14 sm:pl-10 max-[640px]:pl-8 pr-3 py-3 border border-gray-300 rounded-full placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" style="width: 80%;" placeholder="Your e-mail" id="email" required>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fa-solid fa-unlock-keyhole min-[1920px]:ml-20 xl:ml-16 md:ml-10 max-[918px]:invisible sm:ml-8 text-blue-400"></i>
+                    </div>
+                    <input type="text" class="block xl:pl-12 md:pl-14 sm:pl-10 max-[640px]:pl-8 pr-3 py-3 border border-gray-300 rounded-full placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" style="width: 80%;" placeholder="Create password" id="password" required>
+                </div>
+                <div class="flex mt-2 ml-14 font-medium text-white items-center">
+                        <span class="hidden" id="sp">Password strength</span>
+                        <div class="w-16 bg-orange-400 rounded-full ml-10 hidden" style="height: 6px;" id="p1"></div>
+                        <div class="w-16 bg-orange-400 rounded-full ml-3 hidden"  style="height: 6px;"  id="p2"></div>
+                        <div class="w-16 bg-orange-400 rounded-full ml-3 hidden"  style="height: 6px;"  id="p3"></div>
+                </div>
+                <div class="w-5/6 flex mt-5 justify-start gap-6 ml-14 max-[415px]:ml-8 max-[372px]:gap-3">
+                    <button class="bg-orange-400 py-2 px-4 rounded-full text-white font-light" id="create">Create account</button>
+                    <button class="py-2 pl-4 pr-4  rounded-full text-white font-light border-2 border-white border-t border-r border-b border-l" id="login">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
